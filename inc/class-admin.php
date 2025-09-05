@@ -146,10 +146,13 @@ class NSMM_Admin {
 			return;
 		}
 
-		// 権限チェック
-		if ( ! current_user_can( 'edit_theme_options' ) ) {
+		// 管理者権限の確認
+		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
+
+		// リファラーチェック（追加のセキュリティ層）
+		check_admin_referer( 'ns_mega_menu_save', 'ns_mega_menu_nonce' );
 
 		// Parent: Mode
 		if ( isset( $_POST['nsmm_mode'][ $menu_item_db_id ] ) ) {
