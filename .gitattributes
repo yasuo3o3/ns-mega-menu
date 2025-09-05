@@ -16,6 +16,8 @@
 /docs/BLOCK-NEXT.md export-ignore
 /TESTING.md        export-ignore
 /CONTRIBUTING.md   export-ignore
+build-release.sh   export-ignore
+*.zip              export-ignore
 
 # ソースファイルの改行コード統一
 *.php text eol=lf
