@@ -19,6 +19,23 @@
 build-release.sh   export-ignore
 *.zip              export-ignore
 
+# Build directories and temporary files
+/build/            export-ignore
+temp-extract/      export-ignore
+zips/              export-ignore
+*.log              export-ignore
+.cache/            export-ignore
+coverage/          export-ignore
+
+# IDE settings
+.vscode/           export-ignore
+.idea/             export-ignore
+
+# Tool caches
+.phpunit.result.cache export-ignore
+.php-cs-fixer.cache export-ignore
+.phpcs-cache       export-ignore
+
 # ソースファイルの改行コード統一
 *.php text eol=lf
 *.css text eol=lf
