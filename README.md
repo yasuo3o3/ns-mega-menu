@@ -167,7 +167,7 @@ ns_mega_menu_get_thumbnail_id( $menu_item_id );
 
 ## ライセンス
 
-GPL v2 or later
+GPL v2 or later（完全なライセンス文書はLICENSEファイルをご参照ください）
 
 ## 開発
 

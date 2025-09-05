@@ -11,12 +11,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - 公開品質への全面刷新
-- セキュリティ強化（nonce、サニタイズ、エスケープ処理）
-- WordPress Coding Standards準拠
+- セキュリティ強化（nonce、サニタイズ、エスケープ処理、権限チェック）
+- WordPress Coding Standards準拠（PHPCS自動修正適用済み）
 - PHPStan静的解析対応（レベル6）
-- 国際化対応（POTファイル・日本語翻訳）
+- 国際化対応（POTファイル・日本語翻訳・load_plugin_textdomain実装）
 - アンインストール処理実装
-- 開発者向けドキュメント整備
+- 開発者向けドキュメント整備（DEVELOPER.md、TESTING.md等）
+- composer.json による開発環境整備
+- GPLv2 or later ライセンスファイル追加
 
 ### Changed
 - ファイル構造を再編成（`inc/` ディレクトリに整理）
@@ -36,6 +38,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 全ての出力に適切なエスケープ処理を適用
 - ファイルアップロード時の型チェック強化
 - SQLインジェクション対策（prepare文使用）
+- check_admin_referer() によるCSRF対策強化
+- manage_options権限による管理機能アクセス制御
 
 ## [0.01] - 2024-XX-XX
 
