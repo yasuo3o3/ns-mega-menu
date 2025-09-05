@@ -13,7 +13,7 @@
  * Tested up to:      6.5
  * Requires PHP:      7.4
  * Network:           false
- * 
+ *
  * @package NSMegaMenu
  */
 

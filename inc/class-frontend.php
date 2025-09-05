@@ -2,7 +2,7 @@
 /**
  * NS Mega Menu Frontend
  * フロントエンド機能（アセット読み込み等）
- * 
+ *
  * @package NSMegaMenu
  * @since 0.10.0
  */

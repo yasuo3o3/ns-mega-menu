@@ -2,7 +2,7 @@
 /**
  * NS Mega Menu Walker
  * カスタムナビメニューウォーカークラス
- * 
+ *
  * @package NSMegaMenu
  * @since 0.10.0
  */
@@ -18,14 +18,14 @@ class NSMM_Walker extends Walker_Nav_Menu {
 
 	/**
 	 * Parent stack for tracking top-level items
-	 * 
+	 *
 	 * @var array
 	 */
 	protected $parents_stack = array();
 
 	/**
 	 * Start Level - output of sub UL
-	 * 
+	 *
 	 * @param string   $output Passed by reference. Used to append additional content.
 	 * @param int      $depth  Depth of menu item.
 	 * @param stdClass $args   An object of wp_nav_menu() arguments.
@@ -40,7 +40,7 @@ class NSMM_Walker extends Walker_Nav_Menu {
 			$cols  = (int) get_post_meta( $parent_item->ID, '_nsmm_columns', true );
 			$cols  = $cols ? $cols : 4;
 
-			$output .= "\n{$indent}<div class=\"" . esc_attr( $class ) . "\" data-cols=\"" . esc_attr( $cols ) . "\"><ul class=\"nsmm-mega-list\">\n";
+			$output .= "\n{$indent}<div class=\"" . esc_attr( $class ) . '" data-cols="' . esc_attr( $cols ) . "\"><ul class=\"nsmm-mega-list\">\n";
 		} else {
 			$output .= "\n{$indent}<ul class=\"sub-menu nsmm-sub\">\n";
 		}
@@ -48,7 +48,7 @@ class NSMM_Walker extends Walker_Nav_Menu {
 
 	/**
 	 * End Level - close of sub UL
-	 * 
+	 *
 	 * @param string   $output Passed by reference. Used to append additional content.
 	 * @param int      $depth  Depth of menu item.
 	 * @param stdClass $args   An object of wp_nav_menu() arguments.
@@ -67,7 +67,7 @@ class NSMM_Walker extends Walker_Nav_Menu {
 
 	/**
 	 * Start Element - output of menu item
-	 * 
+	 *
 	 * @param string   $output Passed by reference. Used to append additional content.
 	 * @param WP_Post  $item   Menu item data object.
 	 * @param int      $depth  Depth of menu item.
@@ -79,21 +79,21 @@ class NSMM_Walker extends Walker_Nav_Menu {
 		$has_children = in_array( 'menu-item-has-children', $classes, true );
 
 		// Build attributes
-		$atts = '';
-		$atts .= ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) . '"' : '';
-		$atts .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target )     . '"' : '';
-		$atts .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn )        . '"' : '';
-		$atts .= ! empty( $item->url )        ? ' href="'   . esc_url( $item->url )         . '"' : ' href="#"';
+		$atts  = '';
+		$atts .= ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) . '"' : '';
+		$atts .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) . '"' : '';
+		$atts .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) . '"' : '';
+		$atts .= ! empty( $item->url ) ? ' href="' . esc_url( $item->url ) . '"' : ' href="#"';
 
 		// Get menu item meta
-		$title        = apply_filters( 'the_title', $item->title, $item->ID );
-		$desc         = trim( $item->description );
-		$thumb_id     = (int) get_post_meta( $item->ID, '_nsmm_thumb_id', true );
-		$thumb_html   = $thumb_id ? wp_get_attachment_image( $thumb_id, 'medium', false, array( 'class' => 'nsmm-thumb' ) ) : '';
+		$title      = apply_filters( 'the_title', $item->title, $item->ID );
+		$desc       = trim( $item->description );
+		$thumb_id   = (int) get_post_meta( $item->ID, '_nsmm_thumb_id', true );
+		$thumb_html = $thumb_id ? wp_get_attachment_image( $thumb_id, 'medium', false, array( 'class' => 'nsmm-thumb' ) ) : '';
 
 		// Parent mega mode detection
-		$parent_item  = $this->get_current_parent_item();
-		$parent_mode  = $parent_item ? get_post_meta( $parent_item->ID, '_nsmm_mode', true ) : '';
+		$parent_item = $this->get_current_parent_item();
+		$parent_mode = $parent_item ? get_post_meta( $parent_item->ID, '_nsmm_mode', true ) : '';
 
 		// Build li classes
 		$li_classes = array( 'menu-item', 'menu-item-' . $item->ID );
@@ -134,7 +134,7 @@ class NSMM_Walker extends Walker_Nav_Menu {
 
 	/**
 	 * End Element - close menu item
-	 * 
+	 *
 	 * @param string   $output Passed by reference. Used to append additional content.
 	 * @param WP_Post  $item   Menu item data object.
 	 * @param int      $depth  Depth of menu item.
@@ -146,7 +146,7 @@ class NSMM_Walker extends Walker_Nav_Menu {
 
 	/**
 	 * Display Element - enhanced parent tracking
-	 * 
+	 *
 	 * @param object $element           Data object.
 	 * @param array  $children_elements List of elements to continue traversing.
 	 * @param int    $max_depth         Max depth to traverse.
@@ -170,7 +170,7 @@ class NSMM_Walker extends Walker_Nav_Menu {
 
 	/**
 	 * Get current parent item
-	 * 
+	 *
 	 * @return object|null Parent item object
 	 */
 	protected function get_current_parent_item() {

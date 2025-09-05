@@ -2,7 +2,7 @@
 /**
  * NS Mega Menu Admin
  * 管理画面機能（メニュー編集画面のカスタムフィールド等）
- * 
+ *
  * @package NSMegaMenu
  * @since 0.10.0
  */
@@ -62,7 +62,7 @@ class NSMM_Admin {
 
 	/**
 	 * Add custom fields to menu items
-	 * 
+	 *
 	 * @param int      $item_id Menu item ID.
 	 * @param WP_Post  $item    Menu item data.
 	 * @param int      $depth   Menu depth.
@@ -85,7 +85,7 @@ class NSMM_Admin {
 
 	/**
 	 * Render parent menu item fields
-	 * 
+	 *
 	 * @param int $item_id Menu item ID.
 	 */
 	private function render_parent_fields( $item_id ) {
@@ -114,7 +114,7 @@ class NSMM_Admin {
 
 	/**
 	 * Render child menu item fields
-	 * 
+	 *
 	 * @param int $item_id Menu item ID.
 	 */
 	private function render_child_fields( $item_id ) {
@@ -135,9 +135,9 @@ class NSMM_Admin {
 
 	/**
 	 * Save custom fields
-	 * 
-	 * @param int $menu_id         Menu ID.
-	 * @param int $menu_item_db_id Menu item database ID.
+	 *
+	 * @param int   $menu_id         Menu ID.
+	 * @param int   $menu_item_db_id Menu item database ID.
 	 * @param array $args          Menu item arguments.
 	 */
 	public function save_custom_fields( $menu_id, $menu_item_db_id, $args ) {
@@ -186,7 +186,7 @@ class NSMM_Admin {
 
 	/**
 	 * Enqueue admin scripts
-	 * 
+	 *
 	 * @param string $hook Admin page hook.
 	 */
 	public function enqueue_admin_scripts( $hook ) {

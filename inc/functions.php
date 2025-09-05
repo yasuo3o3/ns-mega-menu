@@ -2,7 +2,7 @@
 /**
  * NS Mega Menu Functions
  * テンプレートタグとユーティリティ関数
- * 
+ *
  * @package NSMegaMenu
  * @since 0.10.0
  */
@@ -13,9 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Template tag for rendering mega menu
- * 
+ *
  * Usage: <?php ns_mega_menu_render( array( 'theme_location' => 'primary' ) ); ?>
- * 
+ *
  * @param array $args Menu arguments.
  */
 function ns_mega_menu_render( $args = array() ) {
@@ -46,7 +46,7 @@ function ns_mega_menu_render( $args = array() ) {
 
 /**
  * 後方互換性のための旧関数名エイリアス
- * 
+ *
  * @deprecated 0.10.0 Use ns_mega_menu_render() instead.
  * @param array $args Menu arguments.
  */
@@ -57,7 +57,7 @@ function nsmm_render_menu( $args = array() ) {
 
 /**
  * Get mega menu mode for menu item
- * 
+ *
  * @param int $menu_item_id Menu item ID.
  * @return string Mode ('', 'mega-grid', 'mega-wide').
  */
@@ -67,7 +67,7 @@ function ns_mega_menu_get_mode( $menu_item_id ) {
 
 /**
  * Get mega menu columns for menu item
- * 
+ *
  * @param int $menu_item_id Menu item ID.
  * @return int Columns (2-6, default 4).
  */
@@ -78,7 +78,7 @@ function ns_mega_menu_get_columns( $menu_item_id ) {
 
 /**
  * Get thumbnail ID for menu item
- * 
+ *
  * @param int $menu_item_id Menu item ID.
  * @return int Attachment ID.
  */
@@ -88,7 +88,7 @@ function ns_mega_menu_get_thumbnail_id( $menu_item_id ) {
 
 /**
  * Check if menu item has mega menu enabled
- * 
+ *
  * @param int $menu_item_id Menu item ID.
  * @return bool True if mega menu enabled.
  */
@@ -99,7 +99,7 @@ function ns_mega_menu_has_mega( $menu_item_id ) {
 
 /**
  * Sanitize mega menu mode
- * 
+ *
  * @param string $mode Mode value.
  * @return string Sanitized mode.
  */
@@ -110,7 +110,7 @@ function ns_mega_menu_sanitize_mode( $mode ) {
 
 /**
  * Sanitize mega menu columns
- * 
+ *
  * @param int $cols Columns value.
  * @return int Sanitized columns (2-6).
  */

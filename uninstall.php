@@ -2,7 +2,7 @@
 /**
  * NS Mega Menu Uninstall
  * プラグイン削除時の処理
- * 
+ *
  * @package NSMegaMenu
  * @since 0.10.0
  */
@@ -18,7 +18,7 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 function ns_mega_menu_uninstall() {
 	// 設定オプションの削除確認
 	$delete_data = get_option( 'ns_mega_menu_delete_on_uninstall', false );
-	
+
 	if ( $delete_data ) {
 		// プラグイン設定を削除
 		delete_option( 'ns_mega_menu' );
@@ -29,8 +29,8 @@ function ns_mega_menu_uninstall() {
 
 		$meta_keys = array(
 			'_nsmm_mode',
-			'_nsmm_columns', 
-			'_nsmm_thumb_id'
+			'_nsmm_columns',
+			'_nsmm_thumb_id',
 		);
 
 		foreach ( $meta_keys as $meta_key ) {

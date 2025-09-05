@@ -46,9 +46,9 @@
 
 /* スマホ */
 @media (max-width: 980px){
-  .nsmm .nsmm-top { display:block; border-top:1px solid #eee; }
-  .nsmm .nsmm-top > .nsmm-link { padding:14px; width:100%; }
-  .nsmm .nsmm-mega, .nsmm .nsmm-sub { position:static; display:none; opacity:1; pointer-events:auto; box-shadow:none; border:none; padding:6px 14px; }
-  .nsmm .nsmm-top.nsmm-open > .nsmm-mega,
-  .nsmm .nsmm-top.nsmm-open > .nsmm-sub { display:block; }
+	.nsmm .nsmm-top { display:block; border-top:1px solid #eee; }
+	.nsmm .nsmm-top > .nsmm-link { padding:14px; width:100%; }
+	.nsmm .nsmm-mega, .nsmm .nsmm-sub { position:static; display:none; opacity:1; pointer-events:auto; box-shadow:none; border:none; padding:6px 14px; }
+	.nsmm .nsmm-top.nsmm-open > .nsmm-mega,
+	.nsmm .nsmm-top.nsmm-open > .nsmm-sub { display:block; }
 }

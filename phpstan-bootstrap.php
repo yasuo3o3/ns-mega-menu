@@ -2,7 +2,7 @@
 /**
  * PHPStan Bootstrap
  * 静的解析時のWordPress環境シミュレーション
- * 
+ *
  * @package NSMegaMenu
  */
 

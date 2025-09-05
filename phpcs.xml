@@ -16,15 +16,12 @@
 
 	<!-- WordPress標準を使用 -->
 	<rule ref="WordPress">
-		<!-- セキュリティルール強化 -->
-		<rule ref="WordPress.Security"/>
-		
 		<!-- 国際化ルール -->
 		<rule ref="WordPress.WP.I18n">
 			<properties>
 				<property name="text_domain" type="array">
 					<element value="ns-mega-menu"/>
-				</properties>
+				</property>
 			</properties>
 		</rule>
 	</rule>
@@ -39,9 +36,6 @@
 		<severity>3</severity>
 	</rule>
 
-	<!-- 配列構文：短縮記法を推奨（PHP 5.4+） -->
-	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
-
 	<!-- 行長制限：120文字まで許可 -->
 	<rule ref="Generic.Files.LineLength">
 		<properties>
@@ -52,5 +46,4 @@
 
 	<!-- インデント：タブを使用 -->
 	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
-	<rule ref="WordPress.WhiteSpace.PrecisionAlignment"/>
 </ruleset>

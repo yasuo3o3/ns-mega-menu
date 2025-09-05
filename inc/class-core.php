@@ -2,7 +2,7 @@
 /**
  * NS Mega Menu Core
  * メインプラグイン機能の初期化とコーディネート
- * 
+ *
  * @package NSMegaMenu
  * @since 0.10.0
  */
@@ -74,7 +74,7 @@ class NSMM_Core {
 	/**
 	 * Shortcode handler
 	 * [ns_mega_menu location="primary" menu="" container="nav" class="nsmm nsmm-default"]
-	 * 
+	 *
 	 * @param array $atts Shortcode attributes
 	 * @return string Menu HTML
 	 */
@@ -109,7 +109,7 @@ class NSMM_Core {
 
 	/**
 	 * Get plugin options
-	 * 
+	 *
 	 * @return array Plugin options
 	 */
 	public function get_options() {
@@ -118,7 +118,7 @@ class NSMM_Core {
 
 	/**
 	 * Update plugin options
-	 * 
+	 *
 	 * @param array $options Options array
 	 * @return bool Success status
 	 */
