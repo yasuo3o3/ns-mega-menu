@@ -1,0 +1,54 @@
+/* ベース */
+.nsmm { position: relative; }
+.nsmm ul { list-style: none; margin: 0; padding: 0; }
+.nsmm li { position: relative; }
+.nsmm .nsmm-link { display: inline-flex; align-items: center; gap: .5rem; text-decoration: none; }
+.nsmm .nsmm-title { font-weight: 600; }
+
+/* トップレベル */
+.nsmm .nsmm-top { display: inline-block; }
+.nsmm .nsmm-top > .nsmm-link { padding: 14px 16px; }
+
+/* 開閉: hover / focusで開く */
+.nsmm .nsmm-top:hover > .nsmm-mega,
+.nsmm .nsmm-top:focus-within > .nsmm-mega,
+.nsmm .nsmm-top:hover > .nsmm-sub,
+.nsmm .nsmm-top:focus-within > .nsmm-sub { display: block; opacity: 1; pointer-events: auto; }
+
+/* 通常サブメニュー */
+.nsmm .nsmm-sub { position: absolute; top:100%; left:0; min-width: 220px; background:#fff; border:1px solid #e5e7eb; box-shadow:0 10px 24px rgba(0,0,0,.08); display:none; opacity:0; pointer-events:none; z-index:50; }
+.nsmm .nsmm-sub > li > .nsmm-link { display:block; padding:10px 14px; color:#111; }
+.nsmm .nsmm-sub > li > .nsmm-link:hover { background:#f5f5f5; }
+
+/* メガ共通 */
+.nsmm .nsmm-mega { position:absolute; left:0; right:0; top:100%; background:#fff; border-top:2px solid #111; box-shadow:0 14px 36px rgba(0,0,0,.12); padding:18px 20px; display:none; opacity:0; pointer-events:none; z-index:60; }
+.nsmm .nsmm-mega .nsmm-mega-list { display:grid; gap:14px; }
+
+/* グリッド（画像カード） */
+.nsmm .nsmm-mega-grid[data-cols="2"] .nsmm-mega-list { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.nsmm .nsmm-mega-grid[data-cols="3"] .nsmm-mega-list { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.nsmm .nsmm-mega-grid[data-cols="4"] .nsmm-mega-list { grid-template-columns: repeat(4, minmax(0,1fr)); }
+.nsmm .nsmm-mega-grid[data-cols="5"] .nsmm-mega-list { grid-template-columns: repeat(5, minmax(0,1fr)); }
+.nsmm .nsmm-mega-grid[data-cols="6"] .nsmm-mega-list { grid-template-columns: repeat(6, minmax(0,1fr)); }
+
+.nsmm .nsmm-grid-item > .nsmm-link { display:block; border:1px solid #eee; border-radius:10px; overflow:hidden; }
+.nsmm .nsmm-thumbwrap { display:block; aspect-ratio: 4/3; width:100%; background:#fafafa; overflow:hidden; }
+.nsmm .nsmm-thumbwrap img { width:100%; height:100%; object-fit:cover; display:block; }
+.nsmm .nsmm-grid-item .nsmm-title { display:block; padding:8px 10px; color:#111; }
+.nsmm .nsmm-grid-item .nsmm-desc { display:block; padding:0 10px 10px; font-size:.85rem; color:#555; }
+
+/* ワイド（大きなメニュー） */
+.nsmm .nsmm-mega-wide .nsmm-mega-list { column-gap: 24px; }
+.nsmm .nsmm-wide-item { break-inside: avoid; }
+.nsmm .nsmm-wide-item > .nsmm-link { display:block; padding:8px 0; }
+.nsmm .nsmm-wide-item .nsmm-title { font-weight:600; }
+.nsmm .nsmm-wide-item .nsmm-desc { display:block; font-size:.9rem; color:#555; }
+
+/* スマホ */
+@media (max-width: 980px){
+  .nsmm .nsmm-top { display:block; border-top:1px solid #eee; }
+  .nsmm .nsmm-top > .nsmm-link { padding:14px; width:100%; }
+  .nsmm .nsmm-mega, .nsmm .nsmm-sub { position:static; display:none; opacity:1; pointer-events:auto; box-shadow:none; border:none; padding:6px 14px; }
+  .nsmm .nsmm-top.nsmm-open > .nsmm-mega,
+  .nsmm .nsmm-top.nsmm-open > .nsmm-sub { display:block; }
+}

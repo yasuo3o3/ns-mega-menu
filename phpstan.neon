@@ -1,0 +1,20 @@
+parameters:
+	level: 6
+	paths:
+		- .
+	excludePaths:
+		- vendor/
+		- node_modules/
+		- .history/
+	bootstrapFiles:
+		- phpstan-bootstrap.php
+	ignoreErrors:
+		# WordPress関数の未定義エラーを無視
+		- '#Function wp_.*not found#'
+		- '#Function get_.*not found#'
+		- '#Function add_.*not found#'
+		- '#Function apply_.*not found#'
+		- '#Function esc_.*not found#'
+		- '#Function sanitize_.*not found#'
+		- '#Class WP_.*not found#'
+		- '#Class Walker_.*not found#'

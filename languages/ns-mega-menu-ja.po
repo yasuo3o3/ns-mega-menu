@@ -1,0 +1,75 @@
+# Japanese translations for NS Mega Menu
+# Copyright (C) 2025 Netservice
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: NS Mega Menu 0.10.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ns-mega-menu\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-01T00:00:00+00:00\n"
+"PO-Revision-Date: 2025-01-01T00:00:00+00:00\n"
+"Last-Translator: Netservice <info@netservice.jp>\n"
+"Language-Team: Japanese <info@netservice.jp>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: manual\n"
+"X-Domain: ns-mega-menu\n"
+
+#. Plugin Name
+msgid "NS Mega Menu"
+msgstr "NS メガメニュー"
+
+#. Description
+msgid "メガメニューを簡単に実装。アクセシブル&軽量。"
+msgstr "メガメニューを簡単に実装。アクセシブル&軽量。"
+
+#. Author
+msgid "Netservice"
+msgstr "ネットサービス"
+
+#: inc/class-admin.php:25
+#: inc/class-admin.php:26
+msgid "クラシックメニュー"
+msgstr "クラシックメニュー"
+
+#: inc/class-admin.php:79
+msgid "NS Mega Menu: 親メニューの表示タイプ"
+msgstr "NS Mega Menu: 親メニューの表示タイプ"
+
+#: inc/class-admin.php:81
+msgid "（指定なし：通常の小さなサブメニュー）"
+msgstr "（指定なし：通常の小さなサブメニュー）"
+
+#: inc/class-admin.php:82
+msgid "メガメニュー（画像グリッド）"
+msgstr "メガメニュー（画像グリッド）"
+
+#: inc/class-admin.php:83
+msgid "メガメニュー（ワイド）"
+msgstr "メガメニュー（ワイド）"
+
+#: inc/class-admin.php:88
+msgid "列数（画像グリッド/ワイド共通）"
+msgstr "列数（画像グリッド/ワイド共通）"
+
+#: inc/class-admin.php:104
+msgid "NS Mega Menu: サムネイル（画像グリッド用）"
+msgstr "NS Mega Menu: サムネイル（画像グリッド用）"
+
+#: inc/class-admin.php:109
+msgid "画像を選択"
+msgstr "画像を選択"
+
+#: inc/class-admin.php:110
+msgid "削除"
+msgstr "削除"
+
+#: inc/class-admin.php:175
+msgid "サムネイルを選択"
+msgstr "サムネイルを選択"
+
+#: inc/class-admin.php:176
+msgid "選択"
+msgstr "選択"

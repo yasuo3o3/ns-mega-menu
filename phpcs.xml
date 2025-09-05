@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<ruleset name="NS Mega Menu">
+	<description>WordPress Coding Standards for NS Mega Menu</description>
+
+	<!-- ファイル範囲 -->
+	<file>.</file>
+
+	<!-- 除外パターン -->
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/.git/*</exclude-pattern>
+	<exclude-pattern>*/.history/*</exclude-pattern>
+	<exclude-pattern>*/languages/*.po</exclude-pattern>
+	<exclude-pattern>*/languages/*.pot</exclude-pattern>
+	<exclude-pattern>*/languages/*.mo</exclude-pattern>
+
+	<!-- WordPress標準を使用 -->
+	<rule ref="WordPress">
+		<!-- セキュリティルール強化 -->
+		<rule ref="WordPress.Security"/>
+		
+		<!-- 国際化ルール -->
+		<rule ref="WordPress.WP.I18n">
+			<properties>
+				<property name="text_domain" type="array">
+					<element value="ns-mega-menu"/>
+				</properties>
+			</properties>
+		</rule>
+	</rule>
+
+	<!-- PHP 7.4+ 構文チェック -->
+	<rule ref="PHPCompatibility"/>
+	<config name="testVersion" value="7.4-"/>
+
+	<!-- エラー除外設定（必要最小限） -->
+	<rule ref="WordPress.Files.FileName">
+		<!-- クラスファイル名の柔軟性を許可 -->
+		<severity>3</severity>
+	</rule>
+
+	<!-- 配列構文：短縮記法を推奨（PHP 5.4+） -->
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+
+	<!-- 行長制限：120文字まで許可 -->
+	<rule ref="Generic.Files.LineLength">
+		<properties>
+			<property name="lineLimit" value="120"/>
+			<property name="absoluteLineLimit" value="150"/>
+		</properties>
+	</rule>
+
+	<!-- インデント：タブを使用 -->
+	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
+	<rule ref="WordPress.WhiteSpace.PrecisionAlignment"/>
+</ruleset>
